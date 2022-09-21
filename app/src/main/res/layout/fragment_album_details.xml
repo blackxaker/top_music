@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/im_album_detail"
+        android:layout_width="0dp"
+        android:layout_height="390dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_2" />
+
+    <ImageView
+        android:id="@+id/im_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="59dp"
+        android:background="@drawable/back_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+    <TextView
+        android:id="@+id/tx_author"
+        style="@style/Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_album_detail"
+        tools:text="Bad Bunny" />
+
+    <TextView
+        android:id="@+id/tx_album_title_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@+id/tx_author"
+        app:layout_constraintStart_toStartOf="@+id/tx_author"
+        app:layout_constraintTop_toBottomOf="@+id/tx_author"
+        tools:text="Un Verano Sin Ti" />
+
+    <TextView
+        android:id="@+id/tx_label_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/label_background"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/bright_blue"
+        android:paddingBottom="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tx_album_title_detail"
+        app:layout_constraintTop_toBottomOf="@+id/tx_album_title_detail"
+        android:text="Reggaeton" />
+
+    <Button
+        android:id="@+id/bt_open_album"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="47dp"
+        android:background="@drawable/button_background"
+        android:text="@string/visit_the_album"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tx_copyright"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:textSize="12sp"
+        android:text="@string/copyright_2022_apple_inc_all_rights_reserved"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/bt_open_album"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tx_released"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/tx_copyright"
+        app:layout_constraintEnd_toEndOf="@+id/tx_copyright"
+        app:layout_constraintStart_toStartOf="@+id/tx_copyright"
+        tools:text="Released May 20, 2022" />
+</androidx.constraintlayout.widget.ConstraintLayout>
