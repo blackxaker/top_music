@@ -21,8 +21,6 @@ class API(
 
         val okHttpClient = OkHttpClient().newBuilder()
             .addInterceptor(logging)
-            .addNetworkInterceptor(CacheInterceptor())
-            .addInterceptor(ForceCacheInterceptor())
             .build()
 
         Retrofit.Builder().baseUrl(baseUrl)
@@ -35,7 +33,7 @@ class API(
         client.create(AlbumsAPIRetrofit::class.java)
     }
 
-    override suspend fun getAlbumsByCategory(category: Category): ResultWrapper<ResponseNetwork<FeedNetwork>> {
+    override suspend fun getByCategory(category: Category): ResultWrapper<ResponseNetwork<FeedNetwork>> {
         return when (category) {
             is Category.TOP -> {
                 safeApiCall(IO){

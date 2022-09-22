@@ -1,10 +1,8 @@
 package com.example.vama.data.datasource
 
 import com.example.vama.data.api.AlbumsAPI
-import com.example.vama.data.api.entity.AlbumNetwork
 import com.example.vama.domain.model.Album
 import com.example.vama.domain.model.Category
-import com.example.vama.utils.ResponseNetwork
 import com.example.vama.utils.ResultWrapper
 import com.example.vama.utils.toModel
 import kotlinx.coroutines.CoroutineDispatcher
@@ -17,7 +15,7 @@ class AlbumNetworkDataSource(
 ) {
     suspend fun fetchAlbumsByCategory(category: Category): ResultWrapper<List<Album>> =
         withContext(ioDispatcher) {
-            val albumsByCategory = albumsAPI.getAlbumsByCategory(category)
+            val albumsByCategory = albumsAPI.getByCategory(category)
 
             if (albumsByCategory is ResultWrapper.Success) {
                 val payload = albumsByCategory.value

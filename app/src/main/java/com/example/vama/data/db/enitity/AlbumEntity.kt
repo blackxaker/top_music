@@ -1,14 +1,16 @@
 package com.example.vama.data.db.enitity
 
-import java.util.*
+import io.realm.kotlin.types.RealmObject
+import io.realm.kotlin.types.annotations.PrimaryKey
 
-data class AlbumEntity(
-    val id: Int,
-    val title: String,
-    val author: String,
-    val released: Date,
-    val copyright: String,
-    val imageURL: String,
-    val albumURL: String,
-    val label: String
-)
+class AlbumEntity : RealmObject {
+    @PrimaryKey
+    var id: Int = 0
+    var title: String = ""
+    var author: String = ""
+    var released: String = ""
+    var category: String = ""
+    var imageURL: String = ""
+    var albumURL: String = ""
+    var label: String = ""
+}

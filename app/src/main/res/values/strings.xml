@@ -3,4 +3,9 @@
     <string name="top_100_albums">Top 100 Albums</string>
     <string name="visit_the_album">Visit The Album</string>
     <string name="copyright_2022_apple_inc_all_rights_reserved">Copyright 2022 Apple Inc. All rights reserved.</string>
+    <string name="refresh">refresh</string>
+    <string name="connection_error">Connection error</string>
+    <string name="general_error">Sorry. Something wrong.</string>
+    <string name="server_error">Sorry. Something wrong with the server</string>
+    <string name="nothing_to_show">Nothing… to show</string>
 </resources>
