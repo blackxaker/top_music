@@ -37,18 +37,12 @@ class AlbumsDatabaseImpl : AlbumsDatabase {
                     }
             }
         }
-
-        realm.close()
     }
 
     override suspend fun getAll(): List<AlbumEntity> {
-        val results = realm.query<AlbumEntity>()
+        return realm.query<AlbumEntity>()
             .find()
             .toList()
-
-        realm.close()
-
-        return results
     }
 
     override fun onClose() {
